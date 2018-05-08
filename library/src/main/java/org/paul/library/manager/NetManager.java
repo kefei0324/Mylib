@@ -71,14 +71,6 @@ public class NetManager {
                 }
                 bos.close();
                 String res = bos.toString("utf-8");
-//                JsonObject object = new JsonParser().parse(res).getAsJsonObject();
-//                long code = object.get("code").getAsLong();
-//                if (code == TOKEN_INVALID) {
-//                    T r = clz.newInstance();
-//                    r.setCode(TOKEN_INVALID);
-//                    r.setMessage(object.get("message").getAsString());
-//                    return r;
-//                }
                 return new Gson().fromJson(res, clz);
             } catch (com.google.gson.JsonSyntaxException e) {
                 e.printStackTrace();

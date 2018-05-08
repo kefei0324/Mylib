@@ -1,1 +1,1 @@
-include ':library', ':goto'
+include ':library', ':goto', ':gotoByAnnotations'
